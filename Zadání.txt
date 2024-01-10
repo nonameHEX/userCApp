@@ -1,0 +1,19 @@
+Vytvořte aplikaci v jazyce C# umožňující import kontaktů z CSV souboru.
+- Navrhněte vhodnou strukturu DB tabulek umožňující evidovat kontakty. Kontakt je tvořen jménem, příjmením (povinný údaj), rodným číslem, adresou a telefonem. 
+  U kontaktu mohou být evidovány až 3 telefonní čísla.
+- Uživatel aplikace bude mít možnost vybrat CSV soubor s pevnou strukturou, který bude importován (příklad CSV souboru je přiložen). 
+  Následně proběhne import. Během něj se každý řádek zvaliduje (dle maximální délky v db, RČ a telefonní číslo musí být tvořeno jen čísly) 
+  a pokud je vše validní, záznam se uloží do DB. V případě, že v DB již existuje uživatel se stejným RČ, daný záznam se zaktualizuje. 
+  Pokud přidávaný záznam nemá RČ zadáno, bere se vždy jako nový. V případě jakékoliv chyby aplikace informuje uživatele, co se stalo a případně na jakém řádku importního souboru. 
+- Po dokončeném importu dojde k informování uživatele o tom, kolik záznamů bylo vytvořeno a kolik upraveno.
+- V projektu použijte vhodné architektonické rozvrstvení. Pozn. zadání popisuje triviální aplikaci, návrh ale proveďte tak, jakoby se jednalo o velký projekt.
+- Pro UI použijte technologii WPF a zakomponujte její standardní architekturu.
+- Třídy navrhněte tak, ať jsou jednoduché, čtivé a snadno testovatelné. Pro některé z nich napište Unit testy.
+- Jako DB použijte buď SQL Server, případně localDB. 
+  Pro zapisování dat využijte Entity Framework, případně Linq2Sql (k projektu prosím přiložte create script pro tabulky, případně nechte při spuštění tabulky v případě potřeby vygenerovat).
+
+Nepovinné požadavky:
+- Aplikace bude umět zobrazit data uložená v DB
+- Aplikace bude umět přidávat nové záznamy a zobrazená data upravovat a mazat 
+- Zakomponujte do řešení IoC/DI
+

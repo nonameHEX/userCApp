@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSVImporter"
         mc:Ignorable="d"
+        FontSize="24"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <StackPanel Orientation="vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="TA" Height="300" Width="700"></TextBlock>
+            <Button x:Name="B" Height="50" Width="100" Click="B_Click">Button</Button>
+        </StackPanel>
     </Grid>
 </Window>

@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
-using CSVImporter.Model;
+using CSVImporter.Models;
 
-namespace CSVImporter.Models
+namespace CSVImporter.Database
 {
     public class ContactsDbContext : DbContext
     {

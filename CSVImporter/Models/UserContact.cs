@@ -1,20 +1,32 @@
-﻿namespace CSVImporter.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CSVImporter.Models
 {
     public class UserContact
     {
-        private string m_name {  get; set; }
-        private string m_surname { get; set; }
-        private string m_privateIdNumber { get; set; }
-        private string m_adress { get; set; }
-        private List<int> m_phoneNumber { get; set; }
+        [Key]
+        public int ContactId { get; set; }
 
-        public UserContact(string name, string surname, string privateIdNumber, string adress, List<int> phoneNumber)
-        {
-            m_name = name;
-            m_surname = surname;
-            m_privateIdNumber = privateIdNumber;
-            m_adress = adress;
-            m_phoneNumber = phoneNumber;
-        }
+        [MaxLength(20)]
+        public string m_name {  get; set; }
+
+        [MaxLength(20)]
+        public string m_surname { get; set; }
+
+        [MaxLength(10)]
+        [MinLength(10)]
+        [RegularExpression("^[0-9]+$", ErrorMessage = "Pouze čísla jsou povolena.")]
+        public string m_privateIdNumber { get; set; }
+
+        [MaxLength(50)]
+        public string m_address { get; set; }
+
+        [MaxLength(9)]
+        [RegularExpression("^[0-9]+$", ErrorMessage = "Pouze čísla jsou povolena.")]
+        public string m_phoneNumber1 { get; set; }
+
+        [MaxLength(9)]
+        [RegularExpression("^[0-9]+$", ErrorMessage = "Pouze čísla jsou povolena.")]
+        public string m_phoneNumber2 { get; set; }
     }
 }

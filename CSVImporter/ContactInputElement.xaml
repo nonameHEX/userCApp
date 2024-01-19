@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="CSVImporter.ContactInputElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" TextAlignment="Right" Margin="5" VerticalAlignment="Center">Jméno</TextBlock>
+        <TextBlock Grid.Row="1" TextAlignment="Right" Margin="5" VerticalAlignment="Center">Příjmení</TextBlock>
+        <TextBlock Grid.Row="2" TextAlignment="Right" Margin="5" VerticalAlignment="Center">RČ</TextBlock>
+        <TextBlock Grid.Row="3" TextAlignment="Right" Margin="5" VerticalAlignment="Center">Adresa</TextBlock>
+        <TextBlock Grid.Row="4" TextAlignment="Right" Margin="5" VerticalAlignment="Center">Telefon 1</TextBlock>
+        <TextBlock Grid.Row="5" TextAlignment="Right" Margin="5" VerticalAlignment="Center">Telefon 2</TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="5" Name="inName"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Name="inSurname"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5" Name="inPrivateIdNum"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="5" Name="inAddress"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Margin="5" Name="inPhone1"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Margin="5" Name="inPhone2"/>
+    </Grid>
+</UserControl>

@@ -15,7 +15,6 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="300"/>
-            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Vyberte CSV soubor:"/>
         <Label Grid.Row="1" Name="csvFilePathText"/>
@@ -30,6 +29,5 @@
         <Button Name="ShowData" Grid.Row="3" Content="Zobrazit data z DB" Click="ShowData_Click" Width="250" Margin="5"/>
         <TextBox Grid.Row="4" Name="csvDataText" Margin="5"/>
         <local:ContactInputElement Grid.Row="5" Margin="5"/>
-        <Button Grid.Row="6" Name="AddContact" Content="Přidej Kontakt" Width="250" Margin="5" Click="AddContact_Click"></Button>
     </Grid>
 </Window>

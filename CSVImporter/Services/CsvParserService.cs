@@ -1,8 +1,10 @@
 ﻿using CsvHelper;
 using CsvHelper.Configuration;
 using CSVImporter.Models;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows;
 
 namespace CSVImporter.Services
@@ -30,10 +32,8 @@ namespace CSVImporter.Services
                 csv.Context.RegisterClassMap<UserContactMap>();
                 return csv.GetRecords<UserContact>().ToList();
             }
-
         }
     }
-
     public class UserContactMap : ClassMap<UserContact>
     {
         public UserContactMap()

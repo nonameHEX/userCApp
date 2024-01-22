@@ -36,17 +36,17 @@ namespace CSVImporter
                     var contacts = csvReader.ReadContacts();
                     var dbService = new DatabaseService();
                     dbService.ImportContacts(contacts);
-                    MessageBox.Show("Data úspěšně importována");
+                    MessageBox.Show("Data úspěšně importována", "Úspěch");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Chyba při čtení souboru: {ex.Message}");
+                    MessageBox.Show($"Chyba při čtení souboru: {ex.Message}", "Chyba");
                     Debug.WriteLine(ex.InnerException?.Message);
                 }
             }
             else
             {
-                MessageBox.Show("Vyberte prosím CSV soubor.");
+                MessageBox.Show("Vyberte prosím CSV soubor.", "Chyba");
             }
         }
 
@@ -61,7 +61,7 @@ namespace CSVImporter
                     DisplayContacts(allContacts);
                 }else
                 {
-                    MessageBox.Show("Nejsou žádná data v DB");
+                    MessageBox.Show("Nejsou žádná data v DB", "Chyba");
                 }
             }
         }
@@ -78,11 +78,6 @@ namespace CSVImporter
             }
 
             csvDataText.Text = stringBuilder.ToString();
-        }
-
-        private void AddContact_Click(object sender, RoutedEventArgs e)
-        {
-            //TODO Add contact to DB and maybe to csv file
         }
     }
 }
